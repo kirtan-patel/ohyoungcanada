@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oh Young Canada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fredoka One', cursive;
+      background: linear-gradient(145deg, #fff0f5 0%, #ffe2e2 100%);
+      color: #2c2c2c;
+      scroll-behavior: smooth;
+      transition: background 0.5s ease;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 20px;
+      background: radial-gradient(circle at center, #ff5e5e, #ff4646);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    header img {
+      max-width: 400px;
+      width: 100%;
+      transform: scale(1);
+      transition: transform 0.5s ease;
+    }
+
+    header:hover img {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #ff4646;
+    }
+
+    .menu-category h3 {
+      font-size: 2rem;
+      margin-top: 40px;
+      color: #ff4646;
+      border-left: 6px solid #ff4646;
+      padding-left: 10px;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .menu-item div {
+      font-size: 1.5rem;
+      font-weight: bold;
+      flex: 1;
+      color: #333;
+      position: relative;
+    }
+
+    .badge {
+      background: #ff4646;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+    }
+
+    .menu-item img {
+      width: 220px;
+      height: auto;
+      max-height: 180px;
+      background-color: #eee;
+      border-radius: 16px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-item img:hover {
+      transform: scale(1.07);
+    }
+
+    .carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      height: 260px;
+    }
+
+    .testimonial-slide {
+      display: none;
+      width: 50%;
+      padding: 30px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .testimonial-slide.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stars {
+      color: gold;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .socials {
+      margin: 15px 0;
+    }
+
+    .socials i {
+      margin: 0 15px;
+      font-size: 28px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .socials i:hover {
+      color: #ff4646;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/assets/logo-placeholder.png" alt="Oh Young Canada Logo" />
+  </header>
+
+  <section class="scroll-section">
+    <h2>About Us</h2>
+    <p>Oh Young Canada is a high-energy, event-based food experience serving chaotic, indulgent, and joy-packed street eats. Our poutines, burgers, tacos and corn snacks bring smiles and cravings wherever we park.</p>
+  </section>
+
+  <section class="scroll-section">
+    <h2>Menu</h2>
+    <div class="menu-category">
+      <h3>Taterinerie</h3>
+      <div class="menu-item"><div>Pulled Pork Poutine <span class="badge">NEW</span></div><img src="/assets/pulledpork.png" alt="Pulled Pork Poutine" /></div>
+      <div class="menu-item"><div>Bacon Poutine</div><img src="/assets/bacon.png" alt="Bacon Poutine" /></div>
+      <div class="menu-item"><div>Chicken Poutine</div><img src="/assets/chicken.png" alt="Chicken Poutine" /></div>
+      <div class="menu-item"><div>Tater Tots Nachos</div><img src="/assets/TTnachos.png" alt="Tater Nachos" /></div>
+    </div>
+
+    <div class="menu-category">
+      <h3>The Patty Wagon</h3>
+      <div class="menu-item"><div>Burgers (Beef or Chicken) <span class="badge">HOT</span></div><img src="/assets/burger.png" alt="Burger" /></div>
+      <div class="menu-item"><div>Hotdogs</div><img src="/assets/hotdog.png" alt="Hotdog" /></div>
+    </div>
+
+    <div class="menu-category">
+      <h3>Crunch Cartel</h3>
+      <div class="menu-item"><div>Tacos</div><img src="/assets/tacos.png" alt="Tacos" /></div>
+      <div class="menu-item"><div>Flavored Butter Corn <span class="badge">HOT</span></div><img src="/assets/corn.png" alt="Corn" /></div>
+    </div>
+  </section>
+
+  <section class="scroll-section">
+    <h2>Testimonials</h2>
+    <div class="carousel">
+      <div class="testimonial-slide active"><strong>Jamie L.</strong><div class="stars">★★★★★</div><p>The bacon poutine slapped. I cried a little.</p></div>
+      <div class="testimonial-slide"><strong>Ali R.</strong><div class="stars">★★★★★</div><p>Tater tots nachos are illegal in 4 states. Worth it.</p></div>
+      <div class="testimonial-slide"><strong>Marcy P.</strong><div class="stars">★★★★☆</div><p>The taco was a crunchy masterpiece. Would eat again.</p></div>
+      <div class="testimonial-slide"><strong>Devon C.</strong><div class="stars">★★★★★</div><p>They had me at 'Crunch Cartel'. 10/10 branding.</p></div>
+      <div class="testimonial-slide"><strong>Sara N.</strong><div class="stars">★★★★★</div><p>Flavored corn?! Didn’t know I needed it.</p></div>
+    </div>
+  </section>
+
+  <section class="scroll-section">
+    <h2>Contact Us</h2>
+    <p>Email: contact@ohyoungcanada.ca</p>
+    <p>Phone: (555) 123-4567</p>
+    <div class="socials">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-tiktok"></i>
+      <i class="fab fa-facebook"></i>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Oh Young Canada. All rights reserved.
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.scroll-section');
+    const showSection = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+    const observer = new IntersectionObserver(showSection, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
